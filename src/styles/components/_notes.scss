@@ -1,0 +1,89 @@
+@use '../base/settings' as *;
+
+.notes {
+
+    &__main-content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &__appbar {
+        align-items: center;
+        background-color: $dark-purple;
+        box-shadow: 0 2px 5px -2px $dark-purple;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+
+        span {
+            color: $white;
+            font-size: 16px;
+            font-weight: 300;
+        }
+    }
+
+    &__appbar-btns {
+        display: flex;
+
+        div:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+
+    &__appbar-btn {
+        display: flex;
+
+        img {
+            height: 24px;
+            margin-right: 5px;
+            width: 24px;
+        }
+
+        button {
+            background-color: transparent;
+            border: none;
+            color: $white;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 400;
+
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 30px;
+
+        input, textarea {
+            border: none;
+            color: lighten($color: $dark-purple, $amount: 10);
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        input {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        textarea {
+            flex: 1 1 auto;
+            font-size: 18px;
+            font-weight: 400;
+            resize: none;
+        }
+    }
+
+    &__img img {
+        box-shadow: 5px 5px $dark-grey;
+        height: 150px;
+    }
+}
+
+

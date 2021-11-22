@@ -1,0 +1,61 @@
+@use '../base/settings' as *;
+
+.btn {
+    background-color: transparent;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    height: 45px;
+    letter-spacing: 1.5px;
+    padding: 7px 10px 7px 10px;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:disabled {
+        cursor: auto;
+    }
+
+}
+
+.btn-danger {
+    background-color: $alert;
+    border-radius: 0;
+    transition: background-color 300ms ease-in-out;
+
+    &:hover {
+        background-color: darken($color: $alert, $amount: 5);
+    }
+}
+
+.btn-white {
+    background-color: $white;
+    color: $primary;
+    transition: background-color 300ms ease-in-out;
+
+    &:hover {
+        background-color: darken($color: $white, $amount: 7.5);
+    }
+
+    &:disabled {
+        opacity: 50%;
+
+        &:hover {
+            background-color: $white;
+        }
+    }
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.btn-circle {
+    height: 45px;
+    width: 45px;
+    border-radius: 100px;
+}
+

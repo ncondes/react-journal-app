@@ -1,0 +1,142 @@
+@use '../base/settings' as *;
+
+.auth {
+
+    &__container {
+        align-items: center;
+        background: linear-gradient( 135deg, $secondary, $primary );
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        height: 100%;
+        justify-content: center;
+        margin: 0 auto;
+        position: relative;
+        width: 100vw;
+    }
+
+    &__form {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 45px;
+        max-width: 425px;
+        padding: 25px;
+        width: 100%;
+    }
+
+    &__title {
+        color: $white;
+        font-size: 26px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    &__label {
+        color: $white;
+        font-size: 12px;
+        font-weight: 700;
+        width: 100%;
+    }
+
+    &__input-container {
+        align-items: center;
+        background-color: #FFFFFF20;
+        border-radius: 5px;
+        box-shadow: 3px 3px 10px 1px $primary;
+        display: grid;
+        grid-template-columns: 1fr 7fr;
+        justify-items: center;
+        height: 45px;
+        margin: 10px 0 25px 0;
+        width: 100%;
+
+        img {
+            width: 50%;
+            height: 50%;
+        }
+
+        input {
+            color: $white;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            width: 100%;
+
+            &::placeholder {
+                color: darken($color: $white, $amount: 10);
+                font-size: 12px;
+                letter-spacing: 1.5px;
+            }
+        }
+    }
+
+    &__social {
+        color: $white;
+        text-align: center;
+
+        p:nth-child(1) {
+            font-size: 16px;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        p:nth-child(2) {
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        &-links {
+            align-items: center;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+
+            > div {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+        
+            :not(:last-child) {
+                margin-right: 25px;
+            }
+
+            img {
+                height: 24px;
+                width: 24px;
+            }
+        }
+    }
+
+    &__bottom {
+        bottom: 25px;
+        color: $white;
+        font-size: 14px;
+        font-weight: 300;
+        position: absolute;
+
+        a {
+            color: $white;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+    }
+
+    &__alert {
+        background-color: rgba( lighten( $color: $alert, $amount: 25), 0.2 );
+        border: 1px solid $alert;
+        border-radius: 5px;
+        box-shadow: 1px 1px 3px -1px;
+        color: $alert;
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 30px;
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+}
