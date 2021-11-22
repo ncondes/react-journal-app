@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useForm } from '../../hooks/useForm';
-import { startGoogleLogin, startLoginEmailPassword } from '../../actions/auth';
+import { startFacebookLogin, startGoogleLogin, startLoginEmailPassword } from '../../actions/auth';
 
 
 export const LoginScreen = () => {
@@ -10,9 +10,14 @@ export const LoginScreen = () => {
     const dispatch = useDispatch();
     const { ui } = useSelector(state => state)
 
+    // const [ formValues, handleInputChange ] = useForm({
+    //     email: 'Fernanda@gmail.com',
+    //     password: '123456'
+    // })
+
     const [ formValues, handleInputChange ] = useForm({
-        email: 'Fernanda@gmail.com',
-        password: '123456'
+        email: '',
+        password: ''
     })
 
     const { email, password } = formValues;
@@ -24,6 +29,10 @@ export const LoginScreen = () => {
 
     const handleGoogleLogin = () => {
         dispatch( startGoogleLogin() );
+    }
+    
+    const handleFacebookLogin = () => {
+        dispatch( startFacebookLogin() );
     }
 
     return (
@@ -77,7 +86,10 @@ export const LoginScreen = () => {
                     <p>- or -</p>
                     <p>Login with social</p>
                     <div className='auth__social-links'>
-                        <div className='btn-white btn-circle'>
+                        <div
+                            className='btn-white btn-circle'
+                            onClick={ handleFacebookLogin }
+                        >
                             <img
                                 src='../assets/icons/facebook-icon.png'
                                 alt='facebook icon'

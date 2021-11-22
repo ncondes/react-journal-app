@@ -14,11 +14,18 @@ export const RegisterScreen = () => {
     // import useSelector from react-redux this to select one of the states of the redux
     // const { errorMessage } = useSelector( state => state.ui ); 
 
+    // const [ formValues, handleInputChange ] = useForm({
+    //     name: 'Fernanda',
+    //     email: 'Fernanda@gmail.com',
+    //     password: '123456',
+    //     confirmPassword: '123456',
+    // })
+
     const [ formValues, handleInputChange ] = useForm({
-        name: 'Fernanda',
-        email: 'Fernanda@gmail.com',
-        password: '123456',
-        confirmPassword: '123456',
+        name: '',
+        email: '',
+        password: '',
+        confirmPassword: '',
     })
 
     const {

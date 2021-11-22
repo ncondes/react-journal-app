@@ -1,5 +1,5 @@
 import { types } from '../types/types';
-import { getAuth, signInWithPopup, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { getAuth, signInWithPopup, FacebookAuthProvider, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { googleAuthProvider } from '../firebase/firebase-config';
 import { finishLoading, startLoading } from './ui';
 import Swal from 'sweetalert2';
@@ -58,17 +58,24 @@ export const startGoogleLogin = () => {
 
         signInWithPopup( auth, googleAuthProvider )
             .then( (result) => {
-                // This gives you a Google Access Token. You can use it to access the Google API.
-                // const credential = GoogleAuthProvider.credentialFromResult( result );
-                // const token = credential.accessToken;
-                // The signed-in user info
                 const user = result.user
-                //
                 dispatch(
                     login( user.uid, user.displayName )
                 )
             })
 
+    }
+}
+
+export const startFacebookLogin = () => {
+    return ( dispatch ) => {
+        const provider = new FacebookAuthProvider();
+        signInWithPopup( auth, provider )
+            .then( ({ user }) => {
+                dispatch(
+                    login( user.uid, user.displayName )
+                )
+            })
     }
 }
 
