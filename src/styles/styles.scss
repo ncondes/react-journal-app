@@ -1,4 +1,5 @@
 @use './base/settings';
+@use './mixins//mediaQueries';
 @use './base/base';
 @use './components/auth';
 @use './components/buttons';

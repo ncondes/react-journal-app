@@ -29,7 +29,9 @@ export const NotesAppBar = () => {
 
     return (
         <div className="notes__appbar">
-            <span>{ noteDate.format('LL') }</span>
+            <span
+                className='notes__date'
+            >{ noteDate.format('LL') }</span>
 
             <input
                 id='fileSelector'

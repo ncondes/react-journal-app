@@ -1,11 +1,23 @@
 @use '../base/settings' as *;
+@use '../mixins/mediaQueries' as *;
+
 
 .notes {
+
+    // &__date {
+    //     @include mobile-tablet {
+    //         display: none;
+    //     }
+    // }
 
     &__main-content {
         display: flex;
         flex-direction: column;
         height: 100%;
+
+        @include mobile-tablet {
+            height: 100vh;
+        }
     }
 
     &__appbar {
@@ -85,5 +97,4 @@
         height: 150px;
     }
 }
-
 

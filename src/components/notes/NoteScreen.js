@@ -5,6 +5,7 @@ import { useEffect, useRef } from 'react';
 import { activeNote, startDeleting } from '../../actions/notes';
 
 
+
 export const NoteScreen = () => {
 
     const dispatch = useDispatch();
@@ -36,9 +37,7 @@ export const NoteScreen = () => {
 
     return (
         <div className="notes__main-content animate__animated animate__fadeIn">
-            
             <NotesAppBar />
-
             <div className="notes__content">
 
                 <input 
@@ -63,14 +62,13 @@ export const NoteScreen = () => {
                 {
                     (note.url)
                         && (
-                                <div className="notes__img">
-                                    <img 
-                                        src={ note.url }
-                                        alt="uploaded img"
-                                    />
-                                </div>
+                            <div className="notes__img">
+                                <img 
+                                    src={ note.url }
+                                    alt="uploaded img"
+                                />
+                            </div>
                         )
-                        
                 }
 
             </div>
