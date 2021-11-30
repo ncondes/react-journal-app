@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en RegisterScreen Debe de mostrarse correctamente 1`] = `
+Array [
+  <h2
+    className="auth__title animate__animated animate__fadeIn animate__fast"
+  >
+    Sign Up
+  </h2>,
+  <form
+    className="auth__form animate__animated animate__fadeIn animate__fast"
+    onSubmit={[Function]}
+  >
+    <label
+      className="auth__label"
+    >
+      Full Name
+      <div
+        className="auth__input-container"
+      >
+        <img
+          alt="mail icon"
+          src="../assets/icons/user-icon.png"
+        />
+        <input
+          autoComplete="off"
+          name="name"
+          onChange={[Function]}
+          placeholder="Enter your Full Name"
+          type="text"
+          value=""
+        />
+      </div>
+    </label>
+    <label
+      className="auth__label"
+    >
+      Email
+      <div
+        className="auth__input-container"
+      >
+        <img
+          alt="mail icon"
+          src="../assets/icons/mail-icon.png"
+        />
+        <input
+          autoComplete="off"
+          name="email"
+          onChange={[Function]}
+          placeholder="Enter your Email"
+          type="email"
+          value=""
+        />
+      </div>
+    </label>
+    <label
+      className="auth__label"
+    >
+      Password
+      <div
+        className="auth__input-container"
+      >
+        <img
+          alt="key icon"
+          src="../assets/icons/key-icon.png"
+        />
+        <input
+          name="password"
+          onChange={[Function]}
+          placeholder="************"
+          type="password"
+          value=""
+        />
+      </div>
+    </label>
+    <label
+      className="auth__label"
+    >
+      Confirm Password
+      <div
+        className="auth__input-container"
+      >
+        <img
+          alt="key icon"
+          src="../assets/icons/key-icon.png"
+        />
+        <input
+          name="confirmPassword"
+          onChange={[Function]}
+          placeholder="************"
+          type="password"
+          value=""
+        />
+      </div>
+    </label>
+    <button
+      className="btn btn-white btn-block mt-5 mb-5"
+      type="submit"
+    >
+      Register
+    </button>
+    <p
+      className="auth__bottom"
+    >
+      Have an account?
+      <a
+        href="/auth/login"
+        onClick={[Function]}
+      >
+         Login
+      </a>
+    </p>
+  </form>,
+]
+`;

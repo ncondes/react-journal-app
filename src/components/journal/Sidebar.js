@@ -2,6 +2,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { JournalEntries } from './JournalEntries'
 import { startLogout } from '../../actions/auth';
 import { startNewNote } from '../../actions/notes';
+import { useContext } from 'react';
+import { SidebarContext } from './JournalScreen';
 
 export const Sidebar = () => {
 
@@ -17,8 +19,10 @@ export const Sidebar = () => {
         dispatch( startNewNote() );
     }
 
+    const { sidebarIsOpen } = useContext( SidebarContext );
+
     return (
-        <div className="journal__sidebar">
+        <div className={ `journal__sidebar ${ sidebarIsOpen && 'journal__sidebar--open'}` }>
             
             <div className="journal__sidebar-navbar">
                 <div>

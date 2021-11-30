@@ -1,6 +1,7 @@
 @use '../base/settings' as *;
 
 .nothing__main-content {
+    position: relative;
     align-items: center;
     background-color: $white;
     color: $dark-purple;
@@ -18,3 +19,9 @@
     }
 }
 
+.nothing__mobile-menu {
+    position: fixed;
+    cursor: pointer;
+    top: 20px;
+    right: 20px;
+}

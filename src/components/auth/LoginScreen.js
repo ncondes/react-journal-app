@@ -96,7 +96,7 @@ export const LoginScreen = () => {
                             />
                         </div>
                         <div
-                            className='btn-white btn-circle'
+                            className='btn-white btn-circle btn-google'
                             onClick={ handleGoogleLogin }
                         >
                             <img

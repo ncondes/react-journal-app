@@ -1,6 +1,8 @@
-import moment from 'moment';
+import { useContext } from 'react';
 import { useDispatch } from 'react-redux';
+import moment from 'moment';
 import { activeNote } from '../../actions/notes';
+import { SidebarContext } from './JournalScreen';
 
 export const JournalEntry = ({ id, title, body, date, url }) => {
 
@@ -8,7 +10,10 @@ export const JournalEntry = ({ id, title, body, date, url }) => {
 
     const noteDate = moment( date );
 
+    const { sidebarIsOpen, setSidebarIsOpen } = useContext( SidebarContext ); 
+
     const handleEntryClick = () => {
+        setSidebarIsOpen( !sidebarIsOpen )
         dispatch( activeNote( id, {
             date, title, body, url
         }))

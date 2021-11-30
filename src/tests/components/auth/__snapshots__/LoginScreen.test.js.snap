@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en el Nombre del componente Debe de mostrarse correctamente 1`] = `
+Array [
+  <h2
+    className="auth__title animate__animated animate__fadeIn animate__fast"
+  >
+    Login
+  </h2>,
+  <form
+    className="auth__form animate__animated animate__fadeIn animate__fast"
+    onSubmit={[Function]}
+  >
+    <label
+      className="auth__label"
+    >
+      Email
+      <div
+        className="auth__input-container"
+      >
+        <img
+          alt="mail icon"
+          src="../assets/icons/mail-icon.png"
+        />
+        <input
+          autoComplete="off"
+          name="email"
+          onChange={[Function]}
+          placeholder="Enter your Email"
+          type="email"
+          value=""
+        />
+      </div>
+    </label>
+    <label
+      className="auth__label"
+    >
+      Password
+      <div
+        className="auth__input-container"
+      >
+        <img
+          alt="key icon"
+          src="../assets/icons/key-icon.png"
+        />
+        <input
+          name="password"
+          onChange={[Function]}
+          placeholder="************"
+          type="password"
+          value=""
+        />
+      </div>
+    </label>
+    <button
+      className="btn btn-white btn-block mt-5 mb-5"
+      disabled={false}
+      type="submit"
+    >
+      Login
+    </button>
+    <div
+      className="auth__social"
+    >
+      <p>
+        - or -
+      </p>
+      <p>
+        Login with social
+      </p>
+      <div
+        className="auth__social-links"
+      >
+        <div
+          className="btn-white btn-circle"
+          onClick={[Function]}
+        >
+          <img
+            alt="facebook icon"
+            src="../assets/icons/facebook-icon.png"
+          />
+        </div>
+        <div
+          className="btn-white btn-circle btn-google"
+          onClick={[Function]}
+        >
+          <img
+            alt="google icon"
+            src="../assets/icons/google-icon.png"
+          />
+        </div>
+      </div>
+    </div>
+    <p
+      className="auth__bottom"
+    >
+      Don't have and account?
+      <a
+        href="/auth/register"
+        onClick={[Function]}
+      >
+         Sign up
+      </a>
+    </p>
+  </form>,
+]
+`;

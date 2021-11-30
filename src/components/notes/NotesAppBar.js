@@ -1,6 +1,8 @@
 import moment from 'moment';
+import { useContext } from 'react';
 import { useDispatch, useSelector } from "react-redux"
 import { startSaveNote, startUploading } from '../../actions/notes';
+import { SidebarContext } from '../journal/JournalScreen';
 
 
 export const NotesAppBar = () => {
@@ -25,6 +27,12 @@ export const NotesAppBar = () => {
         if ( file ) {
             dispatch( startUploading( file ) )
         }
+    }
+
+    const { sidebarIsOpen, setSidebarIsOpen } = useContext( SidebarContext );
+
+    const handleMenu = () => {
+        setSidebarIsOpen( !sidebarIsOpen )
     }
 
     return (
@@ -65,6 +73,12 @@ export const NotesAppBar = () => {
                         Save
                     </button>
                 </div>
+            </div>
+            <div
+                    className='notes__mobile-menu pointer'
+                    onClick={ handleMenu }
+                >
+                    <img src='../assets/icons/menu-white-icon.png' alt='mobile menu white icon'/>
             </div>
         </div>
     )

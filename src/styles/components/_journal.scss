@@ -4,6 +4,7 @@
 .journal {
 
     &__grid {
+        position: relative;
         display: grid;
         grid-template-columns: 3fr 11fr;
 
@@ -21,14 +22,26 @@
         color: $white;
         display: flex;
         flex-direction: column;
-        min-width: 325px;
+        min-width: 320px;
         height: 100vh;
         padding: 20px;
         width: 100%;
 
-        // @include mobile-tablet {
-        //      display: none;
-        // }
+        @include mobile-tablet {
+            position: fixed;
+            z-index: 2;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            width: 320px;
+            transform: translateX( -330px );
+            transition: transform 300ms ease-in-out;
+
+            &--open {
+                transform: translateX( 0px );
+            }
+
+        }
 
     }
 

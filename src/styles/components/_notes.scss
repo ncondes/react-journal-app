@@ -4,11 +4,19 @@
 
 .notes {
 
-    // &__date {
-    //     @include mobile-tablet {
-    //         display: none;
-    //     }
-    // }
+    &__date {
+        @include mobile-tablet {
+            display: none;
+        }
+    }
+
+    &__mobile-menu {
+        display: none;
+
+        @include mobile-tablet {
+            display: block;
+        }
+    }
 
     &__main-content {
         display: flex;
@@ -95,6 +103,7 @@
     &__img img {
         box-shadow: 5px 5px $dark-grey;
         height: 150px;
+        max-width: 250px;
     }
 }
 
